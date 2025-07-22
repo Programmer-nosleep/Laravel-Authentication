@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
     <div class="w-full max-w-sm space-y-8">
         <div class="">
             <div class="text-center">
                 <h2 class="mt-6 text-center text-2xl font-bold text-gray-900">Register</h2>
-                <p class="mt-2 text-sm text-center text-gray-500">Sign un to your new account</p>
+                <p class="mt-2 text-sm text-center text-gray-500">Sign up to your new account</p>
             </div>
             @if ($message = Session::get('success'))
                 <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative text-sm">
@@ -62,10 +61,12 @@
                     
                     <div class="mt-4">
                         <label for="password_confirmation" class="text-sm">Confirm Password</label>
-                        <div class="w-full md:w-2/3">
-                            <input type="password" id="password_confirmation" name="password_confirmation"
-                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
-                        </div>
+                        <input 
+                            type="password" 
+                            id="password_confirmation" 
+                            name="password_confirmation"
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        > 
                     </div>
                 </div>
                 {{-- <div class="">
@@ -88,5 +89,4 @@
         </div>
     </div>
 </div>
-
 @endsection

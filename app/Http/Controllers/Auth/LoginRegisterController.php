@@ -22,7 +22,7 @@ class LoginRegisterController extends Controller
         ];
     }
 
-    public function register() : View
+    public function register(): View
     {
         return view('auth.register');
     }
@@ -31,7 +31,7 @@ class LoginRegisterController extends Controller
     {
         $req->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email:rfc,dns|max:255|unique:user,email',
+            'email' => 'required|string|email:rfc,dns|max:255|unique:users,email', 
             'password' => 'required|string|min:8|confirmed'
         ]);
 
@@ -44,43 +44,44 @@ class LoginRegisterController extends Controller
         $credentials = $req->only('email', 'password');
         Auth::attempt($credentials);
         $req->session()->regenerate();
+
         return redirect()->route('home')->withSuccess('You have successfully registered!');
     }
 
-    public function login() : View
+    public function login(): View
     {
         return view('auth.login');
     }
 
-    public function authenticate(Request $req) : RedirectResponse
+    public function authenticate(Request $req): RedirectResponse
     {
         $credentials = $req->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        if (Auth::attempt($credentials))
-        {
+        if (Auth::attempt($credentials)) {
             $req->session()->regenerate();
             return redirect()->route('home');
         }
 
         return back()->withErrors([
-            'email' => 'Your provided credentials do not match in out records.'
+            'email' => 'Your provided credentials do not match in our records.'
         ])->onlyInput('email');
     }
 
-    public function home() : View
+    public function home(): View
     {
         return view('auth.home');
     }
 
-    public function logout(Request $req) : RedirectResponse
+    public function logout(Request $req): RedirectResponse
     {
         Auth::logout();
 
         $req->session()->invalidate();
         $req->session()->regenerateToken();
-        return redirect()->route('login')->withSuccess('You hav logged out successfully!');
+
+        return redirect()->route('login')->withSuccess('You have logged out successfully!');
     }
 }
