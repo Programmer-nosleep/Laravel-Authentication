@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,3 +19,4 @@ Route::controller(LoginRegisterController::class)->group(function() {
 });
 
 Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
+Route::resource('products', ProductController::class);
