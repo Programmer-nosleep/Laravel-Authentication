@@ -8,7 +8,7 @@
         </svg>
       </button>
       <h2 class="text-xl font-bold">
-          {{ $title }} 
+          {{ $title ?? 'Dashboard' }} 
       </h2>
     </div>
     <div class="flex items-center space-x-4">

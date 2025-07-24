@@ -16,5 +16,5 @@
       {{-- @include('components.main') --}}
     </div>
   </div>
-</div>
+</div> 
 @endsection

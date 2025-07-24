@@ -14,19 +14,19 @@
       <div class="px-6 text-xs uppercase text-gray-500 tracking-wider mt-4 mb-2">Menu</div>
       <ul class="px-4 space-y-1">
         <li>
-          <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 text-sm font-medium text-gray-900">
+          <a href="{{ route('admin.dashboard') }}" class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 text-sm font-medium text-gray-900">
             <i class="fas fa-house text-gray-700 w-5 h-5"></i>
             <span>Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-700">
+          <a href="{{ route('admin.users') }}" class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-700">
             <i class="fas fa-users text-gray-700 w-5 h-5"></i>
             <span>Users</span>
           </a>
         </li>
         <li>
-          <a href="#" class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-700">
+          <a href="{{ route('admin.schedule') }}" class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-700">
             <i class="fas fa-calendar-alt text-gray-700 w-5 h-5"></i>
             <span>Schedules</span>
           </a>

@@ -20,14 +20,17 @@ class AuthController extends Controller
 
     public function home() : View
     {
-      return view('home');
+      return view('home', [
+        'title' => 'Tailwindcss Express',
+      ]);
     }
 
     public function admin() : View
     {
       return view('admin.dashboard', [
         'title' => 'Admin Panel',
-        'title_sidebar' => 'Tailwindcss'
+        'title_sidebar' => 'Tailwindcss',
+        'breadcrumbs' => 'Dashboard',
       ]);
     }
 

@@ -10,7 +10,7 @@
 <body>
   @include('components.navbar')
   <div class="">
-    @include('pages.maps')
+    @include('pages.map')
   </div>
 </body>
 </html>

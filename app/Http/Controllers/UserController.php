@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use GuzzleHttp\Middleware;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,9 +12,14 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function users(): View
     {
         //
+        return view('admin.users', [
+            'title' => 'Admin Panel',
+            'title_sidebar' => 'Tailwindcss',
+            'breadcrumbs' => 'Users',
+        ]); 
     }
 
     /**

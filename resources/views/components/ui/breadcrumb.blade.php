@@ -12,6 +12,6 @@
           <span class="mx-2 text-gray-400">/</span>
       </li>
   
-      <li class="text-gray-700 font-medium">Dashboard</li>
+      <li class="text-gray-700 font-medium">{{ $breadcrumbs }}</li>
   </ol>
 </nav>
