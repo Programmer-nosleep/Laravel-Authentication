@@ -85,6 +85,11 @@
               </button>
             </div>
           </form>
+
+          <div class="mt-3.5 text-center text-sm">
+            <span class="text-gray-700">Don't have an account?</span>
+            <a href="{{ route('register') }}" class="font-semibold text-indigo-600">Sign up</a>
+          </div>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ class AuthController extends Controller
 
     public function home() : View
     {
-      return view('home', [
+      return view('airbase.home', [
         'title' => 'Tailwindcss Express',
       ]);
     }

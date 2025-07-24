@@ -10,7 +10,7 @@
 <body>
   @include('components.navbar')
   <div class="">
-    @include('pages.map')
+    @include('airbase.pages.map')
   </div>
 </body>
 </html>
