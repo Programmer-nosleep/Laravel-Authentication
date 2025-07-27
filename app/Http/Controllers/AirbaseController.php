@@ -17,7 +17,7 @@ class AirbaseController extends Controller
     //
     public function index(): View
     {
-        return view('airbase.home', [
+        return view('airbases.home', [
             'title' => 'Tailwindcss Express',
             'airbase' => $this->airbases,
         ]);

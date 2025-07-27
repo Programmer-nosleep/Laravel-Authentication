@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/admin', [AdminController::class, 'admin'])->name('admin.dashboard');
     Route::get('/admin/users', [UserController::class, 'users'])->name('admin.users');
+    Route::get('/admin/users/create', [UserController::class, 'create'])->name('admin.users.create');
     Route::get('/admin/schedule', [ScheduleController::class, 'schedule'])->name('admin.schedule');
 
     // Airbase

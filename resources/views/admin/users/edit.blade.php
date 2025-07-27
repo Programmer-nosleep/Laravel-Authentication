@@ -14,7 +14,7 @@
     @endif
     <div>
       {{-- @include('components.main') --}}
-      @include('components.ui.table')
+      {{-- @include('components.ui.table') --}}
     </div>
   </div>
 </div>

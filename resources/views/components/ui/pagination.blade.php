@@ -1,0 +1,3 @@
+@if($isPaginated)
+
+@endif

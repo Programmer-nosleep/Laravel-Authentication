@@ -30,7 +30,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// 
-document.addEventListener("DOMContentLoaded", function () {
+let map;
 
-});
+window.onload = function () {
+  const overlay = document.getElementById('overlay');
+  if (overlay) {
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+      setTimeout(() => overlay.remove(), 300);
+    }, 1000);
+
+    overlay.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      setTimeout(() => overlay.remove(), 1000);
+    });
+  }
+
+  const userGreeting = document.getElementById('userGreeting');
+  const welcomeDisplayed = window.welcomeDisplayed;
+
+  if (welcomeDisplayed && userGreeting) {
+    setTimeout(() => {
+      userGreeting.classList.add('fade');
+      setTimeout(() => userGreeting.remove(), 850);
+    }, 2000);
+  }
+
+  // Inisialisasi Leaflet
+  map = L.map('map').setView([-6.200000, 106.816666], 10);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Contoh marker statis
+  L.marker([-6.266610, 106.891243])
+    .addTo(map)
+    .bindPopup('<strong>Lanud Halim Perdanakusuma</strong><br>Jakarta Timur')
+    .openPopup();
+};
